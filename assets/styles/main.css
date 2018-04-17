@@ -9,7 +9,6 @@ html {
 }
 
 a {
-  /* color: $brand-color; */
   text-decoration: none;
 }
 
@@ -49,10 +48,16 @@ a {
   transform: translate3d(-50%,-50%,0);
 }
 
+.epicodus-preview-img {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .collection-desc p {
-  /* color: #DAA520; */
   color: #E6644C;
-  /* color: tomato; */
   font-family: 'EB Garamond', serif;
   font-weight: 600;
   font-size: 6vw;
@@ -89,4 +94,8 @@ a {
     -ms-transform: translate3d(-50%,0,0);
     -o-transform: translate3d(-50%,0,0);
     transform: translate3d(-50%,0,0);
+}
+
+.collection-nav-item-span:hover {
+  text-decoration: line-through;
 }
