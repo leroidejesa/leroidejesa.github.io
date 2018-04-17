@@ -34,7 +34,7 @@ a {
     text-transform: uppercase;
 }
 
-.collection-desc {
+.tagline-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -48,15 +48,38 @@ a {
   transform: translate3d(-50%,-50%,0);
 }
 
-.epicodus-preview-img {
-  display: none;
+.collection-preview {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 60vh;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.collection-desc p {
+.hidden {
+  display: none;
+}
+
+.collection-preview-img {
+  flex: 2 1 50%;
+}
+
+.collection-preview-desc {
+  flex: 1 1 30%;
+}
+.collection-preview-img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.tagline-wrap p {
   color: #E6644C;
   font-family: 'EB Garamond', serif;
   font-weight: 600;

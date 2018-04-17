@@ -2,11 +2,11 @@ $( document ).ready(function() {
 
   $('.epicodus-link-hover').hover(
       function() {
-          $('.epicodus-preview-img').fadeIn(200);
-          $('.collection-desc').fadeOut(200);
+        $('.tagline-wrap').fadeOut(300);
+        $('.collection-epicodus div').fadeIn(300);
       },function() {
-          $('.epicodus-preview-img').fadeOut(200);
-          $('.collection-desc').fadeIn(200);
+        $('.collection-epicodus div').fadeOut(300);
+        $('.tagline-wrap').fadeIn(300);
       }
   );
 
