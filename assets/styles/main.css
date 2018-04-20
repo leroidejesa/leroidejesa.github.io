@@ -1,15 +1,27 @@
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: -webkit-linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
+  background: linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
+  width: 100%;
+  height: 100%;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 a {
   text-decoration: none;
+  color: #262626;
 }
 
 .site-header {
@@ -42,37 +54,49 @@ a {
   max-width: none;
   text-align: center;
   -webkit-transform: translate3d(-50%,-50%,0);
-  -moz-transform: translate3d(-50%,-50%,0);
   -ms-transform: translate3d(-50%,-50%,0);
-  -o-transform: translate3d(-50%,-50%,0);
   transform: translate3d(-50%,-50%,0);
+  background: url("../images/trees.jpg") repeat;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
 }
 
 .tagline-wrap p {
-  color: #E6644C;
-  font-family: 'EB Garamond', serif;
-  font-weight: 600;
+  color: transparent;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
   font-size: 6vw;
   font-style: normal;
   letter-spacing: -.01em;
   line-height: 1.3em;
-  text-transform: none;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
 /* COLLECTION PREVIEW - GENERAL */
 
 .collection-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 80%;
   height: 60vh;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .hidden {
@@ -80,11 +104,15 @@ a {
 }
 
 .collection-preview-img {
-  flex: 2 1 50%;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 50%;
+          flex: 2 1 50%;
 }
 
 .collection-preview-desc {
-  flex: 1 1 25%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
   max-width: 315px;
 }
 
@@ -101,12 +129,6 @@ a {
 .collection-preview-desc {
   padding-left: 3em;
 }
-/*
-.collection-preview-desc h1 {
-  font-family: 'EB Garamond', serif;
-  font-weight: 600;
-  font-size: 24px;
-} */
 
 .collection-preview-desc ul {
   padding-left: 2em;
@@ -122,15 +144,31 @@ a {
 /* COLLECTION PREVIEW - SPECIFIC */
 
 .epicodus-preview-img {
-  transform: translateY(7%);
+  -webkit-transform: translateY(7%);
+      -ms-transform: translateY(7%);
+          transform: translateY(7%);
 }
+
+.collection-bio {
+  overflow: hidden;
+}
+
+/* BOTTOM NAV */
 
 .collection-nav {
     z-index: 12;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: #262626;
     font-family: 'Lato', sans-serif;
     font-size: 13px;
@@ -147,12 +185,12 @@ a {
     bottom: 4vw;
     width: 70%;
     -webkit-transform: translate3d(-50%,0,0);
-    -moz-transform: translate3d(-50%,0,0);
     -ms-transform: translate3d(-50%,0,0);
-    -o-transform: translate3d(-50%,0,0);
     transform: translate3d(-50%,0,0);
 }
 
 .collection-nav-item-span:hover {
+  color: #33684e;
   text-decoration: line-through;
+  /* border-bottom: 0.15em solid #33684e; */
 }
